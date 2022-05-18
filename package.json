@@ -1,0 +1,37 @@
+{
+	"name": "simple-mvc-application-with-node.js",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"nodemon": "nodemon src/server.mjs",
+		"lint": "eslint src --max-warnings=0",
+		"build": "sucrase ./src -d ./dist --transforms imports",
+		"start": "node dist/server.js",
+		"test": "jest"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"chalk": "^5.0.1",
+		"connect-flash": "^0.1.1",
+		"cookie-parser": "^1.4.6",
+		"cookie-session": "^2.0.0",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"express-flash": "^0.0.2",
+		"express-handlebars": "^6.0.6",
+		"express-session": "^1.17.3",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.19.1",
+		"session-file-store": "^1.5.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.15.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"jest": "^28.1.0",
+		"nodemon": "^2.0.16",
+		"prettier": "^2.6.2",
+		"sucrase": "^3.21.0"
+	}
+}

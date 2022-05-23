@@ -1,0 +1,38 @@
+<div class='auth-container'>
+	<h2>Cadastre-se</h2>
+	<form action='/auth/register' method='POST'>
+		<div class='form-controll'>
+			<label for='name'>Nome*</label>
+			<input type='text' name='name' placeholder='Digite o seu nome' required />
+		</div>
+		<div class='form-controll'>
+			<label for='email'>E-mail*</label>
+			<input
+				type='email'
+				name='email'
+				placeholder='Digite o seu E-mail'
+				required
+			/>
+		</div>
+		<div class='form-controll'>
+			<label for='password'>Senha*</label>
+			<input
+				type='password'
+				name='password'
+				placeholder='Digite a sua senha'
+				required
+			/>
+		</div>
+		<div class='form-controll'>
+			<label for='confirmPassword'>Confirme sua Senha*</label>
+			<input
+				type='password'
+				name='confirmPassword'
+				placeholder='Confirme sua senha'
+				required
+			/>
+		</div>
+		<button type='submit'>Cadastrar</button>
+		<p>Já tem conta? <a href='/login'>Clique aqui</a></p>
+	</form>
+</div>

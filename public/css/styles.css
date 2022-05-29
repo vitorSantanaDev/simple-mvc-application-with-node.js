@@ -168,6 +168,29 @@ form button[type='submit']:hover,
 	background-color: #22d6f2;
 }
 
+/* CREATE AND EDIT FORM*/
+
+.tought-form-container a {
+	color: #22d6f2;
+	transition: all 500ms ease-in-out;
+}
+
+.tought-form-container a:hover {
+	color: aliceblue;
+}
+
+.tought-form-container h2 {
+	margin: 1em 0;
+	color: aliceblue;
+	border-left: 4px solid #22d6f2;
+	padding: 0.3em;
+}
+
+.tought-form-container form {
+	max-width: 30%;
+	margin-top: 1.5em;
+}
+
 /* FOOTER */
 footer {
 	height: 150px;

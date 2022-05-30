@@ -191,6 +191,56 @@ form button[type='submit']:hover,
 	margin-top: 1.5em;
 }
 
+/* DASHBOARD */
+.title-container {
+	display: flex;
+	margin-bottom: 1.5em;
+	justify-content: space-between;
+}
+
+.title-container h2 {
+	padding: 8px;
+	border-left: 4px solid #22d6f2;
+}
+
+.dashboard h3 {
+	margin-bottom: 1.5em;
+}
+
+.dashboard ul {
+	list-style: none;
+}
+
+.dashboard ul li {
+	padding: 12px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	border-bottom: 1px solid #22d6f2;
+}
+
+.dashboard .action {
+	display: flex;
+	align-items: center;
+}
+
+.dashboard .label {
+	color: #22d6f2;
+	font-weight: 600;
+	margin-right: 2em;
+}
+
+.dashboard .action .button {
+	color: aliceblue;
+	border-color: aliceblue;
+	margin-right: 0.5em;
+}
+.dashboard .action .button a {
+	color: aliceblue;
+}
+
 /* FOOTER */
 footer {
 	height: 150px;

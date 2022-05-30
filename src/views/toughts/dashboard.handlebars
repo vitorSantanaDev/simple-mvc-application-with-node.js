@@ -1,0 +1,27 @@
+<div class='dashboard'>
+	<div class='title-container'>
+		<h2>Dashboard</h2>
+		<a href='/toughts/add' class='button'>Criar pensamentos</a>
+	</div>
+	<h3>Meus pensamentos</h3>
+	<ul>
+		{{#each toughts}}
+			<li>
+				<span class='label'>
+					{{this.title}}
+				</span>
+				<span class='action'>
+					<button class='button'>
+						<a href='/'>
+							Editar
+						</a>
+					</button>
+					<form action='/'>
+						<input type='hidden' name='id' value='{{this.id}}' />
+						<button type='submit' class='button'>Excluir</button>
+					</form>
+				</span>
+			</li>
+		{{/each}}
+	</ul>
+</div>

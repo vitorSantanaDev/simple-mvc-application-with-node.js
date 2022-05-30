@@ -9,5 +9,6 @@ toughtsRouter.get('/dashboard', checkAuth, ToughtsController.dashboard)
 toughtsRouter.get('/add', checkAuth, ToughtsController.createTought)
 
 toughtsRouter.post('/add', checkAuth, ToughtsController.createToughtSave)
+toughtsRouter.post('/remove', checkAuth, ToughtsController.removeTought)
 
 export default toughtsRouter

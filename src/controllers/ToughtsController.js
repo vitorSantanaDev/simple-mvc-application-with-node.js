@@ -22,7 +22,11 @@ export class ToughtsController {
 			res.redirect('/auth/login')
 		}
 
-		res.render('toughts/dashboard', { toughts })
+		let emptyToughts = false
+
+		if (toughts.length === 0) emptyToughts = true
+
+		res.render('toughts/dashboard', { toughts, emptyToughts })
 	}
 
 	static async createTought(req, res) {
@@ -39,7 +43,22 @@ export class ToughtsController {
 			req.flash('success', 'Pensamento criado com sucesso!')
 
 			req.session.save(() => {
-				res.render('toughts/dashboard')
+				res.redirect('/toughts/dashboard')
+			})
+		} catch (error) {
+			errorMessage(error)
+		}
+	}
+
+	static async removeTought(req, res) {
+		try {
+			const { id } = req.body
+			const { userId } = req.session
+			await Tought.destroy({ where: { id: id, UserId: userId } })
+
+			req.flash('success', 'Pensamento removido com sucesso!')
+			req.session.save(() => {
+				res.redirect('/toughts/dashboard')
 			})
 		} catch (error) {
 			errorMessage(error)

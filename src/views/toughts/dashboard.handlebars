@@ -16,7 +16,7 @@
 							Editar
 						</a>
 					</button>
-					<form action='/'>
+					<form action='/toughts/remove' method='POST'>
 						<input type='hidden' name='id' value='{{this.id}}' />
 						<button type='submit' class='button'>Excluir</button>
 					</form>
@@ -24,4 +24,9 @@
 			</li>
 		{{/each}}
 	</ul>
+	{{#if emptyToughts}}
+		<p>Ainda não nenhum pensamento seu, comece a criar
+			<a href='/toughts/add'>por aqui!</a>
+		</p>
+	{{/if}}
 </div>

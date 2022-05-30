@@ -203,6 +203,10 @@ form button[type='submit']:hover,
 	border-left: 4px solid #22d6f2;
 }
 
+.dashboard a {
+	color: #22d6f2;
+}
+
 .dashboard h3 {
 	margin-bottom: 1.5em;
 }

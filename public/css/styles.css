@@ -245,6 +245,100 @@ form button[type='submit']:hover,
 	color: aliceblue;
 }
 
+/* HOME */
+.home-header {
+	max-width: 60%;
+	margin: 0 auto;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.home-header h1 {
+	margin-bottom: 1em;
+}
+
+.home-header span {
+	color: #22d6f2;
+}
+
+.home-header p,
+.home-header form {
+	margin-bottom: 1.2em;
+}
+
+.home-header input {
+	border: none;
+	padding: 0.5em;
+	outline: none;
+	margin-right: 1em;
+	color: aliceblue;
+	background-color: transparent;
+	border-bottom: 1px solid #fff;
+}
+
+.home-header input::placeholder {
+	color: aliceblue;
+}
+.home-header input[type='text'] {
+	width: 60%;
+}
+
+.order-container {
+	max-width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1em;
+}
+
+.order-container span {
+	font-weight: bold;
+	color: aliceblue;
+}
+
+.order-container form {
+	margin: 0;
+}
+
+.order-container .button-order {
+	margin-bottom: 0;
+	border: none;
+	cursor: pointer;
+}
+
+.order-container a {
+	color: aliceblue;
+}
+
+.order-container .button-order:hover {
+	background-color: transparent;
+	color: aliceblue;
+}
+
+.order-container a:hover {
+	color: #22d6f2;
+}
+
+.order-container .button-order,
+.order-container a {
+	margin: 0 10px;
+}
+
+.toughts-container figure {
+	padding: 0.5em;
+	max-width: 50%;
+	margin: 0 auto 1em;
+	border-bottom: 1px solid #3333;
+}
+
+.toughts-container blockquote {
+	font-style: italic;
+	font-size: 1.5em;
+	margin-bottom: 0.4em;
+}
+
 /* FOOTER */
 footer {
 	height: 150px;

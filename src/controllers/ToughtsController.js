@@ -1,10 +1,30 @@
 import Tought from '../models/Toughts'
 import User from '../models/User'
+import { Op } from 'sequelize'
 import { errorMessage } from '../utils/statusMessage'
 
 export class ToughtsController {
 	static async showToughts(req, res) {
-		res.render('toughts/home')
+		let search = ''
+		if (req.query.search) {
+			search = req.query.search
+		}
+
+		const toughtsData = await Tought.findAll({
+			include: User,
+			where: {
+				title: { [Op.like]: `%${search}%` }
+			}
+		})
+		const toughts = toughtsData.map((result) => result.get({ plain: true }))
+
+		let toughtQty = toughts.length
+
+		if (toughtQty === 0) {
+			toughtQty = false
+		}
+
+		res.render('toughts/home', { toughts, search, toughtQty })
 	}
 
 	static async dashboard(req, res) {

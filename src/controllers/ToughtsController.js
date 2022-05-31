@@ -50,6 +50,27 @@ export class ToughtsController {
 		}
 	}
 
+	static async updateTought(req, res) {
+		const { id } = req.params
+		const tought = await Tought.findOne({ where: { id }, raw: true })
+		res.render('toughts/edit', { tought })
+	}
+
+	static async updateToughtSave(req, res) {
+		try {
+			const { title, id } = req.body
+			const tought = { title }
+			await Tought.update(tought, { where: { id } })
+
+			req.flash('success', 'Pensamento atualizado com sucesso!')
+			req.session.save(() => {
+				res.redirect('/toughts/dashboard')
+			})
+		} catch (error) {
+			errorMessage(error)
+		}
+	}
+
 	static async removeTought(req, res) {
 		try {
 			const { id } = req.body
